@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "51703670363",
+    "project_id": "linkedin-praneeth",
+    "storage_bucket": "linkedin-praneeth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51703670363:android:801092fe8a223368a4817e",
+        "android_client_info": {
+          "package_name": "com.linkedin_praneeth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51703670363-4rn7q7u3m7gv5n76tpkogjp89ae25rm9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.linkedin_praneeth",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "51703670363-ch8skv82rremjumlfq58hlk6ek4h7qqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5IBf0PMTtbiYbs3gelVGgXgL1gi8dLVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51703670363-ch8skv82rremjumlfq58hlk6ek4h7qqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
