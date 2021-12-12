@@ -7,7 +7,10 @@ import { StyleSheet, Text, View } from 'react-native';
 import { TextInput,Button } from 'react-native-paper';
 import auth from '@react-native-firebase/auth';
 
+
 export default class SignUp extends Component {
+    
+  
     constructor(props){
         super();
         this.state ={
@@ -26,6 +29,7 @@ export default class SignUp extends Component {
                 displayName:this.state.username
             })
           console.log('User account created & signed in!');
+          this.props.navigation.navigate('FileUpload');
         //   console.log(createUser.user);
         })
         .catch(error => {
@@ -42,6 +46,7 @@ export default class SignUp extends Component {
       }
 
     render() {
+        
         return (
             <View style={styles.container}>
                 <Text style={styles.label}>Join LinkedIn</Text>

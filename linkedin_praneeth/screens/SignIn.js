@@ -4,6 +4,8 @@ import React, {Component} from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {TextInput, Button} from 'react-native-paper';
 import auth from '@react-native-firebase/auth';
+
+
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -28,6 +30,7 @@ export default class SignIn extends Component {
       .signInWithEmailAndPassword(this.state.email, this.state.password)
       .then(() => {
         console.log('User loged in!');
+        this.props.navigation.navigate('FileUpload');
       })
       .catch(error => {
         console.log('Login Unsuccessfull !');
@@ -41,14 +44,17 @@ export default class SignIn extends Component {
     // Create a Google credential with the token
     const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
+    
     // Sign-in the user with the credential
-    return auth().signInWithCredential(googleCredential);
+     auth().signInWithCredential(googleCredential);
+     return this.props.navigation.navigate('FileUpload');
+    
   };
 
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.label}>React Native Firebase Login</Text>
+        <Text style={styles.label}>LinkedIn SignIn</Text>
         <TextInput
           label="Enter Email"
           value={this.state.email}
@@ -64,7 +70,7 @@ export default class SignIn extends Component {
         />
 
         <Button style={styles.btn} mode="contained" onPress={this.userlogin}>
-          Register Button
+          SIGNIN
         </Button>
 
         <GoogleSigninButton
@@ -82,6 +88,7 @@ const styles = StyleSheet.create({
   gbtn: {
     width: 192,
     height: 48,
+    marginTop:30,
   },
   btn: {
     marginTop: 20,
